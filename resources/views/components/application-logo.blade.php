@@ -1,0 +1,1 @@
+<img class="h-16 w-16" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Trident_Maple_bonsai_202%2C_October_10%2C_2008.jpg/1200px-Trident_Maple_bonsai_202%2C_October_10%2C_2008.jpg" alt="">
