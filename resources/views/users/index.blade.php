@@ -15,19 +15,23 @@
                                 <th>N°</th>
                                 <th>Name</th>
                                 <th>Email</th>
-                                <th>Created at</th>
+                                <th>Verified at</th>
                                 <th>Updated at</th>
+                                <th>Phone Number</th>
+                                <th>Address</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-500">
-                            @forelse ($users as $user)
+                            @foreach ($users as $user)
                             <tr>
                                 <td class="px-6 py-4 whitespace-nowrap">{{ $loop->iteration }}</td>
                                 <td class="px-6 py-4 whitespace-nowrap">{{ $user->name }}</td>
                                 <td class="px-6 py-4 whitespace-nowrap">{{ $user->email }}</td>
                                 <td class="px-6 py-4 whitespace-nowrap">{{ $user->email_verified_at }}</td>
                                 <td class="px-6 py-4 whitespace-nowrap">{{ $user->updated_at }}</td>
+                                <td class="px-6 py-4 whitespace-nowrap">{{ $user->phone_number }}</td>
+                                <td class="px-6 py-4 whitespace-nowrap">{{ $user->address }}</td>
                                 <td>
                                     <a href="{{ url('/users/' . $user->id . '/edit') }}">
                                     <x-button class="block mt-1 ml-3 justify-center">Edit</x-button>    
@@ -41,11 +45,7 @@
                                     </form>
                                 </td>
                             </tr>
-                            @empty
-                                <tr>
-                                    Data kosong boss
-                                </tr>
-                            @endforelse
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

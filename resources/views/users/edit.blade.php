@@ -26,9 +26,16 @@
                             </div>
                             <div class="grid grid-row-2 gap-6">
                                 <div>
-                                    <x-label for="email" :value="__('Email')"></x-label>
-                                    <x-input class="block mt-1 w-full" type="email" name="email"
-                                        value="{{ $user->email }}" autofocus></x-input>
+                                    <x-label for="phone_number" :value="__('Phone Number')"></x-label>
+                                    <x-input class="block mt-1 w-full" type="text" name="phone_number"
+                                        value="{{ $user->phone_number }}" autofocus></x-input>
+                                </div>   
+                            </div>
+                            <div class="grid grid-row-2 gap-6">
+                                <div>
+                                    <x-label for="address" :value="__('Address')"></x-label>
+                                    <x-input class="block mt-1 w-full" type="text" name="address"
+                                        value="{{ $user->address }}" autofocus></x-input>
                                 </div>   
                             </div>
                         </div>

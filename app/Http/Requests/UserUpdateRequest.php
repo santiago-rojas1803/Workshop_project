@@ -25,8 +25,10 @@ class UserUpdateRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'email' => 'required|email',
-            'password' => 'min:8|confirmed'
+            'email' => 'required|email|unique:users,email'.$this->route('user')->id.'|max:255',
+            'password' => 'min:8|confirmed',
+            'phone_number' => 'string',
+            'address' => 'string',
         ];
     }
 }

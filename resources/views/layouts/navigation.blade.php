@@ -18,9 +18,11 @@
                     <x-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">
                         {{ __('Users') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('categories.index')" :active="request()->routeIs('categories.index')">
+                        {{ __('Categories') }}
+                    </x-nav-link>
                 </div>
             </div>
-
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <x-dropdown align="right" width="48">
@@ -75,6 +77,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">
                 {{ __('Users') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('categories.index')" :active="request()->routeIs('categories.index')">
+                {{ __('Categories') }}
             </x-responsive-nav-link>
         </div>
 
